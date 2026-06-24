@@ -1,0 +1,37 @@
+
+Recursion:
+- Recursion is a technique where a method calls itself.
+- A base condition is required to stop recursive calls.
+
+Algorithm:
+Future Value = Current Value × (1 + Growth Rate)
+
+The recursive method calculates the value year by year until
+the number of years becomes 0.
+
+Example:
+
+Current Value = 10000
+Growth Rate = 10%
+Years = 5
+
+Year 1 = 11000
+Year 2 = 12100
+Year 3 = 13310
+Year 4 = 14641
+Year 5 = 16105.10
+
+Time Complexity:
+O(n)
+
+Space Complexity:
+O(n)
+(Because each recursive call is stored in the call stack)
+
+Optimization:
+Use Dynamic Programming or Math.pow()
+
+Formula:
+Future Value = Current Value * Math.pow(1 + Growth Rate, Years)
+
+This reduces repeated recursive calls and improves efficiency.
