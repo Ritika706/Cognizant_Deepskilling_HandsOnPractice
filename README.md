@@ -6,13 +6,8 @@ This repository currently has the following branches:
 main
 ├── Data_Structure_and_Algorithms
 ├── Design_Principal_and_Patterns
-|
-PLSQL_Programming
-|__
-|
-Upskilling
-|__
-|
+├── PLSQL_Programming
+└── Upskilling
 ```
 
 `main` is the active branch.
