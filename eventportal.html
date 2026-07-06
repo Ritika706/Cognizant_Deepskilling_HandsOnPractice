@@ -1,0 +1,137 @@
+<!-- TASK 1-HTML BASE TEMPLATE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Event Poratl</title>
+</head>
+<body>
+    <!---Navigation-->
+    <!---Main-->
+    <!---Footer-->
+</body>
+</html>
+
+<!--TASK 2- NAVIGATION AND LINKING-->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contacts</a>
+    <a href="help.html" target="_blank">Help</a>
+</nav>
+<section id="home"> Welcome to our Portal</section>
+<section id="events">Event details go here</section>
+<section id="contact">Contact info here</section>
+
+<!---TASK3- WELCOME MESSAGE IN STYLING-->
+<style>
+    #welcome{
+        background-color: blue;
+        color: white;
+        padding:10px;
+    }
+    .highlight{
+        font-weight: bold;
+        color: green;
+    }
+</style>
+<div id="welcome">Welcome</div>
+<p>Special offer:<span style="color: red;font-weight: bold;">50% off</span></p>
+<p class="highlight"> Register now to reserve your spot</p>
+
+
+<!--TASK 4-IMAGE GALLERY-->
+<table>
+    <caption>Past Community Events</caption>
+    <tr>
+        <td><img src="event1.jpg" alt="Music Fest" title="Music Fest" class="border"></td>
+        <td><img src="event2.jpg" alt="Food Fair" title="Food Fair" class="border"></td>
+        <td><img src="event3.jpg" alt="Sports" title="Sports Day" class="border"></td>
+    </tr>
+    <tr>
+        <td><img src="event4.jpg" alt="Art Show" title="Art Show" class="border"></td>
+        <td><img src="event5.jpg" alt="Book Fair" title="Book Fair" class="border"></td>
+        <td><img src="event6.jpg" alt="Charity Run" title="Charity Run" class="border"></td>
+    </tr>
+</table>
+<style>
+    .border{
+        border: 2px solid black;
+        width: 150px;
+        height: 100px;
+    }
+</style>
+
+<!--TASK 5-EVENT REGISTRATION FORM-->
+<form >
+  <input type="text" name="name" placeholder="Enter Name" required >
+  <input type="email" name="email" placeholder="Enter Email" required>
+  <input type="date" name="date" required>
+  
+  <select name="eventType" required>
+    <option value="music">Music Fest</option>
+    <option value="sports">Sports Day</option>
+    <option value="food">Food Fair</option>
+  </select>
+  
+  <textarea name="message" placeholder="Your message"></textarea>
+  <button type="submit">Register</button>
+  
+  <output></output>
+</form>
+
+<!--TASK 6-EVENT FEEDBACK-->
+<input type="tel" placeholder="Phone" onblur="alert('Validate phone here')">
+<select onchange="alert('Fee displayed')">
+  <option>Music Fest</option>
+  <option>Sports Day</option>
+</select>
+<button onclick="alert('Form Submitted!')">Submit</button>
+<img src="event.jpg" ondblclick="alert('Image enlarged')">
+<textarea onkeyup="alert('Counting characters')"></textarea>
+
+
+<!--TASK 7- VIDEO INVITE-->
+<video src="promo.mp4" controls oncanplay="alert('Video ready to play')"></video>
+
+<script>
+window.onbeforeunload = function() {
+  return "You have unsaved changes!";
+};
+</script>
+
+<!-- TASK 8 - SAVING PREFERENCES -->
+<select id="eventpref" onchange="savepref(this.value)">
+  <option value="music">Music Fest</option>
+  <option value="sports">Sports Day</option>
+</select>
+<button onclick="clearpref()">Clear Preferences</button>
+
+<script>
+function saveref(val){
+     localStorage.setItem("eventpref", val);
+     }
+window.onload = function(){
+  let pref = localStorage.getItem("eventpref");
+  if(pref) document.getElementById("eventpref").value = pref;
+};
+function clearpref(){
+     localStorage.clear(); sessionStorage.clear(); 
+     }
+</script>
+
+<!-- TASK 9 - GEOLOCATION -->
+<button onclick="findEvents()">Find Nearby Events</button>
+<p id="coords"></p>
+
+<script>
+function findEvents(){
+  navigator.geolocation.getCurrentPosition(
+    pos => document.getElementById("coords").innerText = pos.coords.latitude + ", " + pos.coords.longitude,
+    err => alert("Error: " + err.message),
+    { enableHighAccuracy: true, timeout: 5000 }
+  );
+}
+</script>
+
+

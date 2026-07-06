@@ -1,0 +1,104 @@
+/* 1 */
+/* inline css */
+/* <h1 style="color:red;">Community Event Portal</h1>
+
+<head>
+  <style>
+    body { background-color: lightblue; }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head> */
+
+/* external css */
+/* make outside css file and connect with html */
+#welcomeBanner { background-color: blue; color: white; }
+
+/* 2 */
+/* css syntax and comments */
+/* Style for main CTA button */
+.cta-button {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* 3 */
+/* selectors playground */
+* { margin:0; padding:0; }          /* Universal selector */
+h2 { color: navy; }                 /* Element selector */
+#mainHeader { background: yellow; } /* ID selector */
+.eventCard { border:1px solid gray; } /* Class selector */
+h3, p { font-family: Arial; }       /* Grouping selector */
+
+/* 4 */
+/* colors and background styling */
+body {
+  background: #f0f0f0 url('city.jpg') no-repeat center center;
+}
+section h2 {
+  background: linear-gradient(to right, #ff0000, #0000ff);
+}
+p { color: rgba(0,0,0,0.8); }
+
+/* 5 */
+/* fonts and text */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body { font-family: 'Roboto', sans-serif; }
+h1 { font-size: 28px; font-weight: bold; }
+p {
+  text-align: justify;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+/* 6 */
+/* link and list styling */
+a:link { color: blue; }
+a:hover { color: orange; }
+a:active { color: red; }
+a:visited { color: purple; }
+
+nav ul { list-style-type: none; padding:0; margin:0; }
+nav li { display:inline; margin:10px; }
+
+/* 7 */
+/* table styling */
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+  padding:8px;
+  text-align:center;
+}
+tr:nth-child(even) { background-color:#f2f2f2; }
+
+/* 8 */
+/* box model layout */
+.eventCard {
+  border:2px solid black;
+  margin:15px;
+  padding:10px;
+}
+input:focus { outline:2px solid blue; }
+
+/* visibility vs display */
+.hidden { visibility:hidden; }
+.none { display:none; }
+
+
+/* 9 */
+/* multiple columns in text */
+.news {
+  column-count:2;
+  column-gap:30px;
+  column-rule:1px solid gray;
+}
+
+/* 10 */
+/* responsive web design */
+@media screen and (max-width:768px) {
+  nav a { display:block; margin:5px 0; }
+  img { width:80%; }
+  body { font-size:14px; }
+}
+
