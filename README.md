@@ -8,7 +8,8 @@ main
     ├── Design_Principal_and_Patterns
     ├── JUnit_Mockito_and_SLF4J
     ├── PLSQL_Programming
+    ├── Spring_Core_Maven
     └── Upskilling
 ```
 
-`main` is the active branch.
+`main` is the default and active branch.
