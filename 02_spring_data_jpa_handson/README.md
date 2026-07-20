@@ -9,7 +9,6 @@ main
     ├── JUnit_Mockito_and_SLF4J
     ├── PLSQL_Programming
     ├── Spring_Core_Maven
-    ├──Spring_Data_JPA_with_Hibernate
     └── Upskilling
 ```
 
